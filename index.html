@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="title" content="My DevOps Portfolio" />
-  <meta name="description" content="Explore real-world DevOps projects built with Flask, Kubernetes, Terraform, Jenkins, and more." />
+  <meta name="description" content="Explore real-world DevOps projects and download Udit Raj Parihar's resume." />
   <title>My DevOps Journey</title>
   <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700&display=swap" rel="stylesheet" />
   <style>
@@ -97,10 +97,6 @@
       font-size: 1.8rem;
       margin-bottom: 1rem;
     }
-    .project-icon {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
     ul {
       padding-left: 1.2rem;
     }
@@ -123,6 +119,23 @@
       color: var(--link-color);
       font-weight: bold;
     }
+    .resume {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .resume a {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: var(--link-color);
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .resume a:hover {
+      background: #005b8a;
+    }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
@@ -134,76 +147,70 @@
     <button onclick="toggleTheme()">Toggle Theme</button>
   </div>
   <header>
-    <h1>My DevOps Journey</h1>
-    <p>DevOps Engineer | Cloud-Native Enthusiast | Automation Addict</p>
+    <h1>Udit Raj Parihar</h1>
+    <p>DevOps Engineer | Building Scalable Infrastructure & Automation</p>
   </header>
 
   <section><div class="card">
-    <div class="project-icon">⿡</div>
+    <h2>📄 Download My Resume</h2>
+    <p>Here’s a snapshot of my experience and skills.</p>
+    <div class="resume">
+      <a href="Udit's Resume.pdf" download>Download Resume</a>
+    </div>
+  </div></section>
+
+  <section><div class="card">
     <h2>Flask Web App + CI/CD</h2>
     <ul>
-      <li>Build a Python Flask app</li>
-      <li>Test it automatically</li>
-      <li>Deploy using Jenkins + AWS</li>
+      <li>Python Flask app with automated testing</li>
+      <li>CI/CD pipeline using Jenkins</li>
+      <li>Deployed to AWS</li>
     </ul></div>
   </section>
-
   <section><div class="card">
-    <div class="project-icon">⿢</div>
     <h2>Microservices with Docker</h2>
     <ul>
-      <li>Break monolithic app into microservices</li>
-      <li>Use Docker & Docker Compose</li>
-      <li>Add Redis caching + PostgreSQL database</li>
+      <li>Split monolithic app into microservices</li>
+      <li>Used Docker & Docker Compose</li>
+      <li>Added Redis caching + PostgreSQL</li>
     </ul></div>
   </section>
-
   <section><div class="card">
-    <div class="project-icon">⿣</div>
     <h2>Kubernetes Deployment</h2>
     <ul>
-      <li>Set up Kubernetes on AWS</li>
-      <li>Deploy apps with auto-scaling & load balancing</li>
-      <li>Monitor your cluster</li>
+      <li>Deployed workloads on AWS Kubernetes</li>
+      <li>Auto-scaling & load balancing</li>
+      <li>Cluster monitoring</li>
     </ul></div>
   </section>
-
   <section><div class="card">
-    <div class="project-icon">⿤</div>
-    <h2>Infrastructure as Code with Terraform</h2>
+    <h2>Infrastructure as Code (Terraform)</h2>
     <ul>
-      <li>Automate AWS infrastructure</li>
-      <li>Create VPC, EC2, S3 using Terraform</li>
+      <li>Automated AWS VPC, EC2, and S3 provisioning</li>
+      <li>Modular Terraform codebase</li>
     </ul></div>
   </section>
-
   <section><div class="card">
-    <div class="project-icon">⿥</div>
     <h2>Monitoring & Alerting System</h2>
     <ul>
-      <li>Use Prometheus + Grafana for monitoring</li>
-      <li>ELK Stack for logs</li>
-      <li>Set up alerts like real production systems</li>
+      <li>Prometheus + Grafana for monitoring</li>
+      <li>ELK Stack for logging</li>
+      <li>Configured production-grade alerts</li>
     </ul></div>
   </section>
-
   <section><div class="card">
-    <div class="project-icon">⿦</div>
-    <h2>Complete DevOps Pipeline</h2>
+    <h2>End-to-End DevOps Pipeline</h2>
     <ul>
-      <li>Integrate everything you built</li>
-      <li>Use GitOps & ArgoCD</li>
-      <li>Add security scanning, backups, and blue-green deployments</li>
+      <li>Integrated CI/CD with GitOps using ArgoCD</li>
+      <li>Added security scans, backups, and blue-green deploys</li>
     </ul></div>
   </section>
-
   <section><div class="card">
-    <div class="project-icon">⿧</div>
-    <h2>ML Model Deployment Pipeline</h2>
+    <h2>ML Model Deployment</h2>
     <ul>
-      <li>Deploy ML models with Flask API + Streamlit</li>
-      <li>Containerize & deploy on Kubernetes</li>
-      <li>Monitor ML models and set up A/B testing</li>
+      <li>Served models with Flask API + Streamlit</li>
+      <li>Deployed on Kubernetes</li>
+      <li>Setup A/B testing and monitoring</li>
     </ul></div>
   </section>
 
