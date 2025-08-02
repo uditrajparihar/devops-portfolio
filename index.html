@@ -8,136 +8,203 @@
   <title>My DevOps Journey</title>
   <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700&display=swap" rel="stylesheet" />
   <style>
+    :root {
+      --bg-color: #fefefe;
+      --text-color: #111;
+      --card-bg: #f9f9f9;
+      --header-bg: #000;
+      --header-text: #fff;
+      --footer-bg: #f5f5f5;
+      --link-color: #0077b5;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+    [data-theme="dark"] {
+      --bg-color: #111;
+      --text-color: #fefefe;
+      --card-bg: #1a1a1a;
+      --header-bg: #000;
+      --header-text: #fff;
+      --footer-bg: #1a1a1a;
+      --link-color: #4da3ff;
+      --shadow: rgba(255, 255, 255, 0.05);
+    }
+    * {
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Helvetica Neue', sans-serif;
       margin: 0;
       padding: 0;
-      background: #fff;
-      color: #000;
-      line-height: 1.6;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.5s, color 0.5s;
     }
     header {
-      background: #000;
-      color: #fff;
-      padding: 2rem;
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 3rem 1rem 2rem;
       text-align: center;
     }
     header h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin: 0;
     }
     header p {
-      margin: 0.5rem 0 0;
       font-size: 1.2rem;
+      margin-top: 0.5rem;
       color: #ccc;
     }
+    .toggle-container {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+    .toggle-container button {
+      padding: 0.5rem 1rem;
+      background: transparent;
+      border: 1px solid var(--text-color);
+      color: var(--text-color);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .toggle-container button:hover {
+      background: var(--text-color);
+      color: var(--bg-color);
+    }
     section {
-      padding: 3rem 2rem;
-      border-bottom: 1px solid #eee;
+      padding: 3rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    section h2 {
-      font-size: 2rem;
+    .card {
+      background: var(--card-bg);
+      max-width: 700px;
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px var(--shadow);
+      padding: 2rem;
+      margin: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeIn 1s ease forwards;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px var(--shadow);
+    }
+    .card h2 {
+      font-size: 1.8rem;
       margin-bottom: 1rem;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li::before {
-      content: '✔';
-      margin-right: 0.5rem;
-      color: green;
     }
     .project-icon {
       font-size: 2rem;
       margin-bottom: 0.5rem;
     }
+    ul {
+      padding-left: 1.2rem;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+    ul li::before {
+      content: '✔';
+      margin-right: 0.5rem;
+      color: limegreen;
+    }
     footer {
-      background: #f5f5f5;
+      background: var(--footer-bg);
       text-align: center;
-      padding: 2rem;
+      padding: 2rem 1rem;
     }
     .social a {
       margin: 0 1rem;
       text-decoration: none;
-      color: #0077b5;
+      color: var(--link-color);
       font-weight: bold;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
+  <div class="toggle-container">
+    <button onclick="toggleTheme()">Toggle Theme</button>
+  </div>
   <header>
     <h1>My DevOps Journey</h1>
     <p>DevOps Engineer | Cloud-Native Enthusiast | Automation Addict</p>
   </header>
 
-  <section>
+  <section><div class="card">
     <div class="project-icon">⿡</div>
     <h2>Flask Web App + CI/CD</h2>
     <ul>
       <li>Build a Python Flask app</li>
       <li>Test it automatically</li>
       <li>Deploy using Jenkins + AWS</li>
-    </ul>
+    </ul></div>
   </section>
 
-  <section>
+  <section><div class="card">
     <div class="project-icon">⿢</div>
     <h2>Microservices with Docker</h2>
     <ul>
       <li>Break monolithic app into microservices</li>
       <li>Use Docker & Docker Compose</li>
       <li>Add Redis caching + PostgreSQL database</li>
-    </ul>
+    </ul></div>
   </section>
 
-  <section>
+  <section><div class="card">
     <div class="project-icon">⿣</div>
     <h2>Kubernetes Deployment</h2>
     <ul>
       <li>Set up Kubernetes on AWS</li>
       <li>Deploy apps with auto-scaling & load balancing</li>
       <li>Monitor your cluster</li>
-    </ul>
+    </ul></div>
   </section>
 
-  <section>
+  <section><div class="card">
     <div class="project-icon">⿤</div>
     <h2>Infrastructure as Code with Terraform</h2>
     <ul>
       <li>Automate AWS infrastructure</li>
       <li>Create VPC, EC2, S3 using Terraform</li>
-    </ul>
+    </ul></div>
   </section>
 
-  <section>
+  <section><div class="card">
     <div class="project-icon">⿥</div>
     <h2>Monitoring & Alerting System</h2>
     <ul>
       <li>Use Prometheus + Grafana for monitoring</li>
       <li>ELK Stack for logs</li>
       <li>Set up alerts like real production systems</li>
-    </ul>
+    </ul></div>
   </section>
 
-  <section>
+  <section><div class="card">
     <div class="project-icon">⿦</div>
     <h2>Complete DevOps Pipeline</h2>
     <ul>
       <li>Integrate everything you built</li>
       <li>Use GitOps & ArgoCD</li>
       <li>Add security scanning, backups, and blue-green deployments</li>
-    </ul>
+    </ul></div>
   </section>
 
-  <section>
+  <section><div class="card">
     <div class="project-icon">⿧</div>
     <h2>ML Model Deployment Pipeline</h2>
     <ul>
       <li>Deploy ML models with Flask API + Streamlit</li>
       <li>Containerize & deploy on Kubernetes</li>
       <li>Monitor ML models and set up A/B testing</li>
-    </ul>
+    </ul></div>
   </section>
 
   <footer>
@@ -147,5 +214,16 @@
       <a href="https://github.com/uditrajparihar">GitHub</a>
     </div>
   </footer>
+
+  <script>
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+    }
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
 </body>
 </html>
